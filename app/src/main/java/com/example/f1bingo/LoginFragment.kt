@@ -24,12 +24,12 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        setupOnClickListeners()
+        //setupOnClickListeners()
     }
 
-    private fun setupOnClickListeners() {
-        binding.btnSignIn.setOnClickListener {
-            navController.navigate(R.id.action_loginFragment_to_homeFragment)
-        }
-    }
+//    private fun setupOnClickListeners() {
+//        binding.btnSignIn.setOnClickListener {
+//            navController.navigate(R.id.action_loginFragment_to_homeFragment)
+//        }
+//    }
 }
