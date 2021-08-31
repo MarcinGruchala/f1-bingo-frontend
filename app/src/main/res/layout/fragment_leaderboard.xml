@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.LeaderboardFragment">
+    tools:context=".views.mainactivity.fragments.LeaderboardFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

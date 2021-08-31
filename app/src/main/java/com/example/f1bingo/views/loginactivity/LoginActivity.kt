@@ -1,10 +1,11 @@
-package com.example.f1bingo
+package com.example.f1bingo.views.loginactivity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.f1bingo.databinding.ActivityLoginBinding
-import com.example.f1bingo.views.MainActivity
+import com.example.f1bingo.views.mainactivity.MainActivity
+import dagger.hilt.android.AndroidEntryPoint
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -14,7 +15,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLogin.setOnClickListener {
-            Intent(this,MainActivity::class.java).also {
+            Intent(this, MainActivity::class.java).also {
                 startActivity(it)
                 finish()
             }

@@ -6,17 +6,17 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.f1bingo.views.HomeFragment"
+        android:name="com.example.f1bingo.views.mainactivity.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/leaderboardFragment"
-        android:name="com.example.f1bingo.views.LeaderboardFragment"
+        android:name="com.example.f1bingo.views.mainactivity.fragments.LeaderboardFragment"
         android:label="fragment_leaderboard"
         tools:layout="@layout/fragment_leaderboard" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.f1bingo.views.ProfileFragment"
+        android:name="com.example.f1bingo.views.mainactivity.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

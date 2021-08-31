@@ -1,4 +1,4 @@
-package com.example.f1bingo.views
+package com.example.f1bingo.views.mainactivity.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
