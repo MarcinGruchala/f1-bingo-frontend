@@ -13,12 +13,5 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        binding.btnLogin.setOnClickListener {
-            Intent(this, MainActivity::class.java).also {
-                startActivity(it)
-                finish()
-            }
-        }
     }
 }
