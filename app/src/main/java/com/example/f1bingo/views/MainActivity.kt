@@ -1,10 +1,10 @@
-package com.example.f1bingo
+package com.example.f1bingo.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.f1bingo.R
 import com.example.f1bingo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
