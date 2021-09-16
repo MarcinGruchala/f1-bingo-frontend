@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.frontend.f1bingo">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name="com.frontend.f1bingo.di.F1BingoApplication"
         android:allowBackup="true"
