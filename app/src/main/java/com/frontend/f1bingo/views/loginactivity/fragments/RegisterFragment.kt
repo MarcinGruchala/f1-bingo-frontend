@@ -1,4 +1,4 @@
-package com.example.f1bingo.views.loginactivity.fragments
+package com.frontend.f1bingo.views.loginactivity.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import com.example.f1bingo.R
-import com.example.f1bingo.databinding.FragmentRegisterBinding
+import com.frontend.f1bingo.R
+import com.frontend.f1bingo.databinding.FragmentRegisterBinding
 
 
 class RegisterFragment : Fragment() {

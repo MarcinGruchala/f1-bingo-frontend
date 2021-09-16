@@ -1,4 +1,4 @@
-package com.example.f1bingo
+package com.frontend.f1bingo
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

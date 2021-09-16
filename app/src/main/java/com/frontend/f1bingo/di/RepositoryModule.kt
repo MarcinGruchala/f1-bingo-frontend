@@ -1,6 +1,6 @@
-package com.example.f1bingo.di
+package com.frontend.f1bingo.di
 
-import com.example.f1bingo.repository.RepositoryImpl
+import com.frontend.f1bingo.repository.RepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
