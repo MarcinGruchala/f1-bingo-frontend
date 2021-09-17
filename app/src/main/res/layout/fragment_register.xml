@@ -24,72 +24,58 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        >
-
-        <EditText
-            android:id="@+id/etRegisterUserName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/etRegisterUserName_hint"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/etRegisterEmail"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:autofillHints="no" />
+        app:layout_constraintVertical_bias="1.0">
 
         <EditText
             android:id="@+id/etRegisterEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:autofillHints="no"
             android:ems="10"
             android:hint="@string/etEmail_hint"
             android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toTopOf="@+id/etRegisterPassowrd"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etRegisterUserName"
-            android:autofillHints="no" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/etRegisterPassowrd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:autofillHints="no"
             android:ems="10"
             android:hint="@string/etPassword_hint"
             android:inputType="textPassword"
-            app:layout_constraintBottom_toTopOf="@+id/etConfirmPassword"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etRegisterEmail"
-            android:autofillHints="no" />
+            app:layout_constraintTop_toBottomOf="@+id/etRegisterEmail" />
 
         <EditText
             android:id="@+id/etConfirmPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:autofillHints="no"
             android:ems="10"
             android:hint="@string/etConfirmPassword_hint"
             android:inputType="textPassword"
-            app:layout_constraintBottom_toTopOf="@+id/tvRegisterErrorMessage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etRegisterPassowrd"
-            android:autofillHints="no" />
+            app:layout_constraintTop_toBottomOf="@+id/etRegisterPassowrd" />
 
         <TextView
             android:id="@+id/tvRegisterErrorMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

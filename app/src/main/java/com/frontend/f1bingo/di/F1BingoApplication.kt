@@ -1,4 +1,4 @@
-package com.example.f1bingo.di
+package com.frontend.f1bingo.di
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
