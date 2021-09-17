@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.frontend.f1bingo.R
 import com.frontend.f1bingo.databinding.FragmentLoginBinding
+import com.frontend.f1bingo.views.loginactivity.utils.LoginInputHandler
+import com.frontend.f1bingo.views.loginactivity.utils.LoginInputStatus
 import com.frontend.f1bingo.views.mainactivity.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -49,7 +51,14 @@ class LoginFragment : Fragment() {
     private fun setLoginClickListener() {
         val email = binding.etEmail.text.trim().toString()
         val password = binding.etPassword.text.trim().toString()
+        if (LoginInputHandler.validateLoginInput(email,password) == LoginInputStatus.OK) {
+            signInWithEmailAndPassword(email, password)
+        } else {
+            Toast.makeText(activity, "Login input is empty", Toast.LENGTH_LONG).show()
+        }
+    }
 
+    private fun signInWithEmailAndPassword(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnSuccessListener { authResult ->
                 authResult?.let {
