@@ -2,11 +2,11 @@ package com.frontend.f1bingo.views.mainactivity.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.frontend.f1bingo.R
 import com.frontend.f1bingo.databinding.FragmentProfileBinding
 import com.frontend.f1bingo.views.loginactivity.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -35,14 +35,16 @@ class ProfileFragment : Fragment() {
 
     private fun bindUserData() {
         auth.currentUser?.let {
-            binding.tvUserEmail.text = "User email: ${it.email}"
+            binding.tvUserEmail.text = getString(
+                R.string.tvUserEmail_text,
+                it.email
+            )
         }
     }
 
     private fun setOnClickListeners() {
         binding.apply {
             btnSignOut.setOnClickListener {
-                Log.d(TAG,"Sign out")
                 auth.signOut()
                 startLoginActivity()
             }

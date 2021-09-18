@@ -1,14 +1,18 @@
 <resources>
     <string name="app_name">F1 Bingo</string>
-    <string name="etPassword_hint">Password</string>
-    <string name="btnRegister_text">Register</string>
-    <string name="etEmail_hint">Email</string>
-    <string name="btnLogin_hint">Login</string>
-    <string name="tvAppName_text">F1 Bingo</string>
+    <!--    Edit text hints-->
     <string name="etRegisterUserName_hint">User Name</string>
     <string name="etConfirmPassword_hint">Confirm Password</string>
-    <string name="btnCancel_text">Go back</string>
-
+    <string name="etPassword_hint">Password</string>
+    <string name="etEmail_hint">Email</string>
+    <!--    Text view texts   -->
+    <string name="tvAppName_text">F1 Bingo</string>
+    <!--    Buttons    -->
+    <string name="tvUserEmail_text">User email: %1$s</string>
+    <string name="btnSignOut_text">Sign Out</string>
+    <string name="btnGoBack_text">Go back</string>
+    <string name="btnRegister_text">Register</string>
+    <string name="btnLogin_hint">Login</string>
     <!--    Registration error messages    -->
     <string name="registration_succeed">Registration succeed</string>
     <string name="registration_failed">Registration failed</string>
