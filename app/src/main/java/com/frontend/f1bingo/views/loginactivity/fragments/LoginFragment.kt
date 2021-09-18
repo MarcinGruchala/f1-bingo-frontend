@@ -66,7 +66,7 @@ class LoginFragment : Fragment() {
                 }
             }
             .addOnFailureListener { e ->
-                Toast.makeText(activity,"Login failed", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity,e.message.toString(), Toast.LENGTH_LONG).show()
                 Log.d(TAG, e.message.toString())
             }
     }
