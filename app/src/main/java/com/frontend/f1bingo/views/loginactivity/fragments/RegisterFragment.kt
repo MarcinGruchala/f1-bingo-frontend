@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.frontend.f1bingo.R
 import com.frontend.f1bingo.databinding.FragmentRegisterBinding
+import com.frontend.f1bingo.views.loginactivity.utils.RegistrationInputHandler
+import com.frontend.f1bingo.views.loginactivity.utils.RegistrationInputStatus
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -35,27 +37,64 @@ class RegisterFragment : Fragment() {
                 setRegistrationClickListener()
             }
             btnCancelRegister.setOnClickListener {
-                Navigation.findNavController(view).navigate(R.id.action_registerFragment_to_loginFragment)
+                navigateToLoginFragment(view)
             }
         }
     }
 
     private fun setRegistrationClickListener() {
+        resetErrorMessage()
         val email = binding.etRegisterEmail.text.trim().toString()
         val password = binding.etRegisterPassowrd.text.trim().toString()
         val repeatPassword = binding.etConfirmPassword.text.trim().toString()
 
-        if (password == repeatPassword) {
-            auth.createUserWithEmailAndPassword(email, password)
-                .addOnSuccessListener { authResult ->
-                    authResult?.let {
-                        Toast.makeText(activity,"Registration succeed", Toast.LENGTH_LONG).show()
-                    }
-                }
-                .addOnFailureListener { e ->
-                    Toast.makeText(activity,"Registration failed", Toast.LENGTH_LONG).show()
-                    Log.d(TAG, e.message.toString())
-                }
+        when(RegistrationInputHandler.validateRegistrationInput(email, password, repeatPassword)) {
+            RegistrationInputStatus.OK -> {
+                registerWithEmailAndPassword(email, password)
+            }
+            RegistrationInputStatus.EMPTY -> {
+                Toast.makeText(
+                    activity,
+                    getString(R.string.registration_empty_fields),
+                    Toast.LENGTH_LONG
+                ).show()
+                binding.tvRegisterErrorMessage.text = getString(R.string.registration_empty_fields)
+            }
+            RegistrationInputStatus.INVALID_PASSWORD -> {
+                Toast.makeText(
+                    activity,
+                    getString(R.string.registration_invalid_password),
+                    Toast.LENGTH_LONG
+                ).show()
+                binding.tvRegisterErrorMessage.text = getString(R.string.registration_invalid_password)
+            }
+            else -> {}
         }
+    }
+
+    private fun registerWithEmailAndPassword(email: String, password: String) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnSuccessListener { authResult ->
+                authResult?.let {
+                    Toast.makeText(
+                        activity,
+                        getString(R.string.registration_succeed),
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            }
+            .addOnFailureListener { e ->
+                Log.d(TAG, e.message.toString())
+                Toast.makeText(activity, e.message.toString(), Toast.LENGTH_LONG).show()
+                binding.tvRegisterErrorMessage.text =  e.message.toString()
+            }
+    }
+
+    private fun resetErrorMessage() {
+        binding.tvRegisterErrorMessage.text = ""
+    }
+
+    private fun navigateToLoginFragment(view: View) {
+        Navigation.findNavController(view).navigate(R.id.action_registerFragment_to_loginFragment)
     }
 }

@@ -7,5 +7,11 @@
     <string name="tvAppName_text">F1 Bingo</string>
     <string name="etRegisterUserName_hint">User Name</string>
     <string name="etConfirmPassword_hint">Confirm Password</string>
-    <string name="btnCancel_text">Cancel</string>
+    <string name="btnCancel_text">Go back</string>
+
+    <!--    Registration error messages    -->
+    <string name="registration_succeed">Registration succeed</string>
+    <string name="registration_failed">Registration failed</string>
+    <string name="registration_empty_fields">Registration fields are empty</string>
+    <string name="registration_invalid_password">Invalid password</string>
 </resources>
