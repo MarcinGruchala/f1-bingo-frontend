@@ -14,4 +14,6 @@
     <string name="registration_failed">Registration failed</string>
     <string name="registration_empty_fields">Registration fields are empty</string>
     <string name="registration_invalid_password">Invalid password</string>
+    <!--    Login error messages    -->
+    <string name="login_empty_fields">"Login input is empty"</string>
 </resources>

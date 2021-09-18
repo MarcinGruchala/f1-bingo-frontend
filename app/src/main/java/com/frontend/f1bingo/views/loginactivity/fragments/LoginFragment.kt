@@ -54,7 +54,11 @@ class LoginFragment : Fragment() {
         if (LoginInputHandler.validateLoginInput(email,password) == LoginInputStatus.OK) {
             signInWithEmailAndPassword(email, password)
         } else {
-            Toast.makeText(activity, "Login input is empty", Toast.LENGTH_LONG).show()
+            Toast.makeText(
+                activity,
+                getString(R.string.login_empty_fields),
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 
